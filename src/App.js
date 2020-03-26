@@ -1,26 +1,18 @@
-import React from 'react';
+import React, { useCallback, Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import TodoListHeader from './TodoListHeader.js';
+import TodoList from './TodoList'
+//入口文件
+class App extends Component{
+  render(){
+  //返回JSX代码
+    return (
+      <div className="App">
+       <TodoListHeader />
+       <TodoList />
+      </div>
+    );
+  }
 }
-
 export default App;
